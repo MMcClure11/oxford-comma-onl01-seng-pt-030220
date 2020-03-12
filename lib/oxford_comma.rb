@@ -6,11 +6,12 @@ def oxford_comma(array)
     array.join
   elsif array.count == 2 
     array.join(" and ")
-  else
-    last_element = array.pop
-    array.join(", ")  << ", and " << last_element
+  else 
+    array[array.length - 1].prepend("and ")
+    array.join(", ")
   end 
 end
+
 
 #method call oxford_comma (argument[" "])
 #method --> oxford comma --> take 1 argument(array of strings) convert those strings into one large string with commas and an 'and' 
